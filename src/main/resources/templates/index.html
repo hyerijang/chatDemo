@@ -1,0 +1,31 @@
+<!-- greeting.html -->
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <title>chatDemo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 부트스트랩 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+<body>
+<h1>chatDemo</h1>
+<div class="row">
+    <div class="col-md-10">
+        <div th:if="${not #strings.isEmpty(userName)}">
+            <span id="login-user" th:text="${userName}">사용자</span> 님, 안녕하세요.
+            <a href="/logout" class="btn btn-sm btn-info active" role="button">Logout</a>
+        </div>
+        <div th:if="${#strings.isEmpty(userName)}">
+            <a href="/oauth2/authorization/google" class="btn btn-sm btn-success active" role="button">Google Login</a>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- 부트스트랩 : 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
