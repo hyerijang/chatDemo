@@ -2,10 +2,10 @@ package com.example.chatDemo.service.posts;
 
 import com.example.chatDemo.domain.posts.Posts;
 import com.example.chatDemo.domain.posts.PostsRepository;
-import com.example.chatDemo.web.dto.PostsListResponseDto;
-import com.example.chatDemo.web.dto.PostsResponseDto;
-import com.example.chatDemo.web.dto.PostsSaveRequestDto;
-import com.example.chatDemo.web.dto.PostsUpdateRequestDto;
+import com.example.chatDemo.web.dto.post.PostsListResponseDto;
+import com.example.chatDemo.web.dto.post.PostsResponseDto;
+import com.example.chatDemo.web.dto.post.PostsSaveRequestDto;
+import com.example.chatDemo.web.dto.post.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

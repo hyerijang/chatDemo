@@ -2,8 +2,8 @@ package com.example.chatDemo.web;
 
 import com.example.chatDemo.domain.posts.Posts;
 import com.example.chatDemo.domain.posts.PostsRepository;
-import com.example.chatDemo.web.dto.PostsSaveRequestDto;
-import com.example.chatDemo.web.dto.PostsUpdateRequestDto;
+import com.example.chatDemo.web.dto.post.PostsSaveRequestDto;
+import com.example.chatDemo.web.dto.post.PostsUpdateRequestDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

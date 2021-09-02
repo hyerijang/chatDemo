@@ -1,4 +1,4 @@
-package com.example.chatDemo.web.dto;
+package com.example.chatDemo.web.dto.post;
 
 import com.example.chatDemo.domain.posts.Posts;
 import lombok.Builder;

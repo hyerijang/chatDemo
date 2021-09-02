@@ -1,9 +1,9 @@
 package com.example.chatDemo.web;
 
 import com.example.chatDemo.service.posts.PostsService;
-import com.example.chatDemo.web.dto.PostsResponseDto;
-import com.example.chatDemo.web.dto.PostsSaveRequestDto;
-import com.example.chatDemo.web.dto.PostsUpdateRequestDto;
+import com.example.chatDemo.web.dto.post.PostsResponseDto;
+import com.example.chatDemo.web.dto.post.PostsSaveRequestDto;
+import com.example.chatDemo.web.dto.post.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
