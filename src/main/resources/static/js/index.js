@@ -37,7 +37,7 @@ var main = {
 
         $.ajax({
             type: 'POST',
-            url: '/api/v1/posts',
+            url: '/api/v1/items',
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data)
@@ -64,7 +64,7 @@ var main = {
         //jquery 사용할 경우 아래와 같이 간편하게 쓸수 있다.
         $.ajax({
             type: 'PUT', //PostsApiController에서 이미 put으로 선언되었으므로 여기도 put, REST에서 CRUD는 POST,GET,PUT,DELETE로 맵핑된다.
-            url: '/api/v1/posts/' + id, //어느 게시글을 수정할 지 url 패스로 구분하기 위해 Path에 id를 추가
+            url: '/api/v1/items/' + id, //어느 게시글을 수정할 지 url 패스로 구분하기 위해 Path에 id를 추가
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data)
@@ -82,7 +82,7 @@ var main = {
 
         $.ajax({
             type: 'DELETE',
-            url: '/api/v1/posts/' + id,
+            url: '/api/v1/items/' + id,
             dataType: 'json',
             contentType: 'application/json; charset=utf-8'
         }).done(function () {

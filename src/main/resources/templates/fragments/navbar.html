@@ -19,11 +19,11 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <div th:if="${not #strings.isEmpty(userName)}">
-                <span id="login-user" th:text="${userName}">사용자</span> 님, 안녕하세요.
+                <span id="login-userEntity" th:text="${userName}">사용자</span> 님, 안녕하세요.
                 <a href="/logout" class="btn btn-sm btn-info active" role="button">Logout</a>
             </div>
             <div th:if="${#strings.isEmpty(userName)}">
-                <!--            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+                <!--            <li><a href="#"><span class="glyphicon glyphicon-userEntity"></span> Sign Up</a></li>-->
                 <a href="/oauth2/authorization/google" class="btn btn-sm btn-success active" role="button">Google
                     Login</a>
             </div>

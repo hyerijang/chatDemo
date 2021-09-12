@@ -1,8 +1,8 @@
 package com.example.commerceDemo.web;
 
-import com.example.commerceDemo.config.auth.LoginUser;
-import com.example.commerceDemo.config.auth.dto.SessionUser;
-import com.example.commerceDemo.service.posts.PostsService;
+import com.example.commerceDemo.common.config.auth.LoginUser;
+import com.example.commerceDemo.common.config.auth.dto.SessionUser;
+import com.example.commerceDemo.domains.catalog.item.service.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,13 +15,13 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class IndexController {
 
-    private final PostsService postsService;
+    private final ItemService itemsService;
     private final HttpSession httpSession;
 
 
     @GetMapping("/")
     public String index(Model model, @LoginUser SessionUser user) {
-        model.addAttribute("posts", postsService.findAllDesc());
+        model.addAttribute("items", itemsService.findAllDesc());
         if (user != null) {
             model.addAttribute("userName", user.getName());
         }
@@ -29,12 +29,12 @@ public class IndexController {
     }
 
 
-    @GetMapping("/posts/save")
-    public String postsSave(Model model, @LoginUser SessionUser user) {
+    @GetMapping("/items/save")
+    public String itemsSave(Model model, @LoginUser SessionUser user) {
         if (user != null) {
             model.addAttribute("userName", user.getName());
         }
-        return "posts-save";
+        return "items-save";
     }
 
 }

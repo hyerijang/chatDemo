@@ -1,22 +1,17 @@
-package com.example.commerceDemo.web.dto.user;
+package com.example.commerceDemo.common.config.auth.dto;
 
 import com.example.commerceDemo.domains.user.domain.UserEntity;
-import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 @Getter
-@NoArgsConstructor
-public class UserResponseDto {
-
-    private Long id;
+public class SessionUser implements Serializable {
     private String name;
     private String email;
     private String picture;
 
-    @Builder
-    public UserResponseDto(UserEntity userEntity) {
-        this.id = userEntity.getId();
+    public SessionUser(UserEntity userEntity) {
         this.name = userEntity.getName();
         this.email = userEntity.getEmail();
         this.picture = userEntity.getPicture();

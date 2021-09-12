@@ -14,10 +14,10 @@
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-12">
-                <a href="/posts/save" role="button" class="btn btn-primary pull-left">글 등록</a>
+                <a href="/items/save" role="button" class="btn btn-primary pull-left">아이템 등록</a>
                 <div class="pull-right">
                     <div th:if="${not #strings.isEmpty(userName)}">
-                        <span id="login-user" th:text="${userName}">사용자</span> 님, 안녕하세요.
+                        <span id="login-userEntity" th:text="${userName}">사용자</span> 님, 안녕하세요.
                         <a href="/logout" class="btn btn-sm btn-info active" role="button">Logout</a>
                     </div>
                     <div th:if="${#strings.isEmpty(userName)}">
@@ -34,7 +34,7 @@
         <table class="table table-horizontal table-bordered">
             <thead class="thead-strong">
             <tr>
-                <th>게시글번호</th>
+                <th>품번</th>
                 <th>제목</th>
                 <th>작성자</th>
                 <th>최종수정일</th>
@@ -42,9 +42,9 @@
             </thead>
             <tbody id="tbody">
 
-            <tr th:each="post : ${posts}">
+            <tr th:each="post : ${itemEntity}">
                 <td th:text="${post.id}"></td>
-                <td><a th:href="@{/posts/update/{id} (id=${post.id})} " th:text="${post.title}">title</a></td>
+                <td><a th:href="@{/items/update/{id} (id=${post.id})} " th:text="${post.title}">title</a></td>
                 <td th:text="${post.author}">author</td>
                 <td th:text="${post.modifiedDate}">modifiedDate</td>
             </tr>
