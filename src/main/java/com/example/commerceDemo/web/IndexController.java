@@ -21,15 +21,23 @@ public class IndexController {
 
     @GetMapping("/")
     public String index(Model model, @LoginUser SessionUser user) {
-        model.addAttribute("items", itemsService.findAllDesc());
         if (user != null) {
             model.addAttribute("userName", user.getName());
         }
         return "index";
     }
 
+    @GetMapping("/catalog")
+    public String catalog(Model model, @LoginUser SessionUser user) {
+        model.addAttribute("items", itemsService.findAllDesc());
+        if (user != null) {
+            model.addAttribute("userName", user.getName());
+        }
+        return "catalog";
+    }
 
-    @GetMapping("/items/save")
+
+    @GetMapping("/items/new")
     public String itemsSave(Model model, @LoginUser SessionUser user) {
         if (user != null) {
             model.addAttribute("userName", user.getName());

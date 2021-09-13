@@ -32,7 +32,6 @@ public class IndexControllerTest {
 
     private MockMvc mvc;
 
-
     @BeforeEach
     public void setup() {
         mvc = MockMvcBuilders

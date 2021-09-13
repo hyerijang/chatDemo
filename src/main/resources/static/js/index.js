@@ -30,9 +30,11 @@ var main = {
     },
     save: function () {
         var data = {
-            title: $('#title').val(),
-            author: $('#author').val(),
-            content: $('#content').val()
+            name: $('#name').val(),
+            imagePath: $('#imagePath').val(),
+            stockQuantity: $('#stockQuantity').val(),
+            price: $('#price').val(),
+            categoryId: $('#categoryId').val()
         };
 
         $.ajax({
@@ -43,7 +45,7 @@ var main = {
             data: JSON.stringify(data)
         }).done(function () {
             alert('글이 등록되었습니다.');
-            window.location.href = '/';
+            window.location.href = '/catalog';
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
@@ -70,7 +72,7 @@ var main = {
             data: JSON.stringify(data)
         }).done(function () {
             alert('글이 수정되었습니다.');
-            window.location.href = '/'; //수정 후 메인 화면으로 이동
+            window.location.href = '/catalog'; //수정 후 메인 화면으로 이동
         }).fail(function (error) {
             //JSON.stringify(object)
             //JavaScript 값이나 객체를 JSON 문자열로 변환
@@ -87,7 +89,7 @@ var main = {
             contentType: 'application/json; charset=utf-8'
         }).done(function () {
             alert('글이 삭제되었습니다.');
-            window.location.href = '/';
+            window.location.href = '/catalog';
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });

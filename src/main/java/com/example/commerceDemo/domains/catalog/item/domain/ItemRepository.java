@@ -9,6 +9,5 @@ public interface ItemRepository extends JpaRepository<ItemEntity, Long> {
 
     @Query("SELECT p FROM ItemEntity p ORDER BY p.itemId DESC")
     List<ItemEntity> findAllDesc();
-
-
+    
 }

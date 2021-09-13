@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lagn="ko" xmlns:th="http://www.thymeleaf.org">
+<div th:replace="fragments/configHeader"/>
+<body>
+<div th:replace="fragments/head"/>
+<div class="container">
+
+    <div class="col-md-12">
+
+        <div class="titleContainer">
+            <h3>상품 목록</h3>
+        </div>
+
+        <!-- 목록 출력 영역 -->
+        <table class="table table-horizontal table-bordered">
+            <thead class="thead-strong">
+            <tr>
+                <th>품번</th>
+                <th>제품명</th>
+                <th>가격</th>
+                <th>재고</th>
+                <th>최종수정일</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+
+            <tr th:each="item : ${items}">
+                <td th:text="${item.itemId}"></td>
+                <td><a th:href="@{/items/update/{itemId} (itemId=${item.itemId})} " th:text="${item.name}">name</a></td>
+                <td th:text="${item.price}">-1</td>
+                <td th:text="${item.stockQuantity}">-1</td>
+                <td th:text="${#temporals.format(item.modifiedDate,'yyyy-MM-dd HH:mm')}">modifiedDate</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
+
+<style>
+    .titleContainer {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+
+    td {
+        font-size: 13px;
+    }
+
+
+</style>

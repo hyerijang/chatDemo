@@ -39,3 +39,4 @@ out/
 ## oauth
 /src/main/resources/application-oauth.properties
 /client_secret_505725206348-ohtq6ng77bb8370t3mpk9lvr04e0pcp7.apps.googleusercontent.com.json
+/src/main/SQL/
