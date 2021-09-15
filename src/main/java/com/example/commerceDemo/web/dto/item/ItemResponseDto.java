@@ -1,6 +1,6 @@
 package com.example.commerceDemo.web.dto.item;
 
-import com.example.commerceDemo.domains.catalog.item.domain.ItemEntity;
+import com.example.commerceDemo.domains.catalog.domain.item.ItemEntity;
 import lombok.Getter;
 
 @Getter

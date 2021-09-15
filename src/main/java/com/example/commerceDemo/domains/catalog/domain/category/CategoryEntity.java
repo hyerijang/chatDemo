@@ -1,4 +1,4 @@
-package com.example.commerceDemo.domains.catalog.category;
+package com.example.commerceDemo.domains.catalog.domain.category;
 
 import lombok.AccessLevel;
 import lombok.Getter;

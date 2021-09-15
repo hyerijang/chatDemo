@@ -1,7 +1,7 @@
-package com.example.commerceDemo.domains.catalog.item.service;
+package com.example.commerceDemo.domains.catalog.service;
 
-import com.example.commerceDemo.domains.catalog.item.domain.ItemEntity;
-import com.example.commerceDemo.domains.catalog.item.domain.ItemRepository;
+import com.example.commerceDemo.domains.catalog.domain.item.ItemEntity;
+import com.example.commerceDemo.domains.catalog.domain.item.ItemRepository;
 import com.example.commerceDemo.web.dto.item.ItemListResponseDto;
 import com.example.commerceDemo.web.dto.item.ItemResponseDto;
 import com.example.commerceDemo.web.dto.item.ItemSaveRequestDto;

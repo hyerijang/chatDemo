@@ -1,4 +1,4 @@
-package com.example.commerceDemo.domains.catalog.item.domain;
+package com.example.commerceDemo.domains.catalog.domain.item;
 
 import com.example.commerceDemo.common.config.BaseTimeEntity;
 import lombok.Builder;
@@ -16,7 +16,6 @@ public class ItemEntity extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long itemId;
-
     @Column(length = 500, nullable = false)
     private String name;
     private String imagePath;

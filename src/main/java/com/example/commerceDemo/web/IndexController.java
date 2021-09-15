@@ -2,7 +2,7 @@ package com.example.commerceDemo.web;
 
 import com.example.commerceDemo.common.config.auth.LoginUser;
 import com.example.commerceDemo.common.config.auth.dto.SessionUser;
-import com.example.commerceDemo.domains.catalog.item.service.ItemService;
+import com.example.commerceDemo.domains.catalog.service.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

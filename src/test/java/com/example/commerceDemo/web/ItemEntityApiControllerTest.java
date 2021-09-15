@@ -1,7 +1,7 @@
 package com.example.commerceDemo.web;
 
-import com.example.commerceDemo.domains.catalog.item.domain.ItemEntity;
-import com.example.commerceDemo.domains.catalog.item.domain.ItemRepository;
+import com.example.commerceDemo.domains.catalog.domain.item.ItemEntity;
+import com.example.commerceDemo.domains.catalog.domain.item.ItemRepository;
 import com.example.commerceDemo.web.dto.item.ItemSaveRequestDto;
 import com.example.commerceDemo.web.dto.item.ItemUpdateStockQuantityRequestDto;
 import com.fasterxml.jackson.databind.ObjectMapper;

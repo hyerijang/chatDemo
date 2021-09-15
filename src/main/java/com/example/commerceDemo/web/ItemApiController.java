@@ -1,6 +1,6 @@
 package com.example.commerceDemo.web;
 
-import com.example.commerceDemo.domains.catalog.item.service.ItemService;
+import com.example.commerceDemo.domains.catalog.service.ItemService;
 import com.example.commerceDemo.web.dto.item.ItemResponseDto;
 import com.example.commerceDemo.web.dto.item.ItemSaveRequestDto;
 import com.example.commerceDemo.web.dto.item.ItemUpdateStockQuantityRequestDto;
